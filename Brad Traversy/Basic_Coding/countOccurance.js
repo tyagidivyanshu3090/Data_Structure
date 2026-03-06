@@ -6,15 +6,23 @@
  */
 
 // -------------------------------------------------------------
-// Method 1: "lower-level" approach
-function countOccurrences(str, char) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] == char) {
-      count++;
-    }
-  }
-  return count;
-}
+// Method 1: "lower-level" approach:
 
+// function countOccurrences(str, char) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] == char) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countOccurrences("Hello world", "l"));  // 3
+
+// -------------------------------------------------------------
+
+// @Method2: The Split Method (Functional Approach)
+
+let countOccurrences = (str, char) => str.split(char).length - 1;
 console.log(countOccurrences("Hello world", "l"));
